@@ -1,0 +1,57 @@
+@import '../../variable-styles.scss';
+
+.compass-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.compass-outer {
+    background: white;
+    border-radius: 50%;
+    height: 360px;
+    position: relative;
+    width: 360px;
+}
+  
+.compass-pointer {
+    border-style: solid;
+    border-width: 30px 20px 0 20px;
+    border-color: red transparent transparent transparent;
+    height: 0;
+    left: 50%;
+    position: absolute;
+    top: -15px;
+    transform: translateX(-50%);
+    width: 0;
+}
+  
+.compass-inner {
+    background: url(../../assets/images/compass.png) center no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 85%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+}
+
+.compass-start {
+    background-color: $blue;
+    border-radius: 10px;
+    border-style: none;
+    color:white;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 40px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.compass-start:hover {
+    background-color: $darkblue;
+}
