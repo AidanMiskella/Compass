@@ -2,26 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
-## Development server
+## How to run
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To run this project use `ng serve`, to test a physical device, you can serve the project on a local network using `--host [IP Address]`, to run this on an iOS device, you must use a secure network using `--ssl true`
 
-## Code scaffolding
+## Brief overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Created two components, top bar component and compass component
 
-## Build
+After clicking the button "Get Started", iOS devices will ask for permmission to use Device Orientation Event details
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+After getting the device orientation details, the rotation is calculated and the compass rotates
 
-## Running unit tests
+Based on the device orientation details, clicking on text-to-speech button will tell users which direction they are facing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Challenges and solutions
 
-## Running end-to-end tests
+Firstly, I tried to use the GeoLocation API which can access a compass heading property. I believe that this is no longer supported by browsers. I then searched for another API which could access orientation details. I found Device Orientation, this gave me access to some of the properties I needed.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Another challenge that I faced was finding true north on the user device. Instead the users north value, is the direction they are facing during initialization.
