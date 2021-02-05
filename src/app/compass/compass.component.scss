@@ -19,7 +19,7 @@
 .compass-pointer {
     border-style: solid;
     border-width: 30px 20px 0 20px;
-    border-color: red transparent transparent transparent;
+    border-color: $red transparent transparent transparent;
     height: 0;
     left: 50%;
     position: absolute;
@@ -39,7 +39,8 @@
     width: 85%;
 }
 
-.compass-start {
+.compass-start,
+.compass-text-to-speech {
     background-color: $blue;
     border-radius: 10px;
     border-style: none;
@@ -48,10 +49,11 @@
     font-size: 16px;
     font-weight: bold;
     padding: 15px 40px;
-    margin-top: 60px;
+    margin-top: 40px;
     text-align: center;
 }
 
-.compass-start:hover {
+.compass-start:hover,
+.compass-text-to-speech:hover {
     background-color: $darkblue;
 }
